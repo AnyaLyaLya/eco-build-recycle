@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import cn from 'classnames';
 import { links } from '../../utils/links';
+const cross = require('../../image/cross.png');
 
 interface Props {
   isVisible: boolean;
@@ -32,7 +33,7 @@ export const BurgerMenu: FC<Props> = ({ isVisible, onClose }) => {
         </a>
 
         <button className='burger-menu__button-cross' onClick={() => onClose(false)}>
-          <img src="/cross.svg" alt="cross" className='burger-menu__button-cross--svg' />
+          <img src={cross} alt="cross" className='burger-menu__button-cross--svg' />
         </button>
       </div>
 

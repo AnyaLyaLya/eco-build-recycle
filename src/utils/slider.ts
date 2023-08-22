@@ -2,7 +2,7 @@ export const slider = [
   {
     title: 'Expertise and experience:',
     text: 'We have years of experience in the field of environmental services. You can rely on our team of professionals.',
-    logo: '/expertise.svg',
+    logo: 'expertize',
   },
   {
     title: 'Responsibility:',

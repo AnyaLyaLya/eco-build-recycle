@@ -4,6 +4,9 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { slider } from '../../utils/slider';
 import { useEffect, useRef, useState } from "react";
 import cn from 'classnames';
+const expertize = require('../../image/expertise.png');
+const leaf = require('../../image/leaf.png');
+const response = require('../../image/response.png');
 
 export const Slider = () => {  
   const [slidesPerView, setSlidesPerView] = useState(getSlidesPerView());
@@ -87,10 +90,27 @@ export const Slider = () => {
         spaceBetween='20px'
         slidesPerView={slidesPerView}
       >
-        {slider.map((slide, index) => (
+        {slider.map((slide, index) => {
+          let img;
+
+          switch(index) {
+            case 0:
+              img = expertize;
+              break;
+            case 1:
+              img = response;
+              break;
+            case 2:
+              img = leaf;
+              break;
+            default:
+              img = expertize;
+          }
+          
+          return (
           <SwiperSlide>
             <div className='slider__slide' key={index}>
-              <img src={slide.logo} alt={slide.title}  className="slider__slide--img"/>
+              <img src={img} alt={slide.title}  className="slider__slide--img"/>
 
               <h2 className="slider__slide--title">
                 {slide.title}
@@ -101,7 +121,7 @@ export const Slider = () => {
               </p>
             </div>
           </SwiperSlide>
-       ))}
+       )})}
       </Swiper>
     </div>
   );

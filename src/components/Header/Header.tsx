@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BurgerMenu } from "../BurgerMenu";
 import { links } from "../../utils/links";
+const menu = require('../../image/menu.png');
 
 export const Header = () => {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
@@ -43,7 +44,7 @@ export const Header = () => {
         </a>
 
         <button className='header__menu-button' onClick={() => setMenuIsVisible(true)}>
-          <img src="/menu.svg" alt="menu" className='header__menu-button--svg' />
+          <img src={menu} alt="menu" className='header__menu-button--svg' />
         </button>
       </header>
     </>      
