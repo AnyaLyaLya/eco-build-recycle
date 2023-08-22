@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/eco-build-recycle/static/css/main.e8de15c3.css",
+    "main.js": "/eco-build-recycle/static/js/main.b779bd49.js",
+    "index.html": "/eco-build-recycle/index.html",
+    "main.e8de15c3.css.map": "/eco-build-recycle/static/css/main.e8de15c3.css.map",
+    "main.b779bd49.js.map": "/eco-build-recycle/static/js/main.b779bd49.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e8de15c3.css",
+    "static/js/main.b779bd49.js"
+  ]
+}
