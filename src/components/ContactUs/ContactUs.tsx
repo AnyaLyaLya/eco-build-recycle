@@ -1,6 +1,7 @@
 import { Dispatch, FC, SetStateAction, useState } from "react";
 import { validateEmail, validateName } from "../../utils/validation.utils";
 import { Response } from "../../types/Response";
+const earth = require('../../image/earth.png');
 
 interface Props {
   onSubmit: Dispatch<SetStateAction<Response | null>>,
@@ -68,7 +69,7 @@ export const ContactUs:FC<Props> = ({ onSubmit }) => {
 
       <div className="contact__content">
         <img 
-          src="/earth.png" 
+          src={earth} 
           alt="earth" 
           title="earth" 
           className="contact__image"

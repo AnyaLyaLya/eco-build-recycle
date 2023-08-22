@@ -1,10 +1,13 @@
+import recycle from '../../image/recycle.svg';
+const bunner = require('../../image/bunner.jpeg');
+
 export const Bunner = () => {
   return (
     <div className='bunner'>
       <div className='bunner__content' id="about">
         <img 
           className="bunner__recycle"
-          src="/recycle.svg" 
+          src={recycle} 
           alt="recycle" 
           title='recycle' 
         />
@@ -23,7 +26,7 @@ export const Bunner = () => {
 
       <div className="bunner__image-block">
         <img 
-          src="/bunner.jpeg" 
+          src={bunner} 
           alt='EcoVin' 
           title='EcoVin'
           className='bunner__img'

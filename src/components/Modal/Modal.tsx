@@ -14,7 +14,7 @@ export const Modal:FC<Props> = ({ response, setResponse }) => {
 
         <p className="modal__text">We will send a reply to the email you specified <i>{response.email}</i></p>
       </div>
-      <img src="/cross.svg" alt="cross" className='modal__svg' onClick={() => setResponse(null)}/>
+      <img src={"/cross.svg"} alt="cross" className='modal__svg' onClick={() => setResponse(null)}/>
     </div>
   );
 };

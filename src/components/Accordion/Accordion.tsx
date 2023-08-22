@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { accordionData } from "../../utils/accordionData";
+const rubbish = require('../../image/rubbish.png');
 
 export const Accordion = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -45,7 +46,7 @@ export const Accordion = () => {
               </ol>
             </div>
             
-            <img src={item.imageUrl} alt={item.title} />
+            <img src={rubbish} alt={item.title} />
           </div>  
         </div>
       ))}

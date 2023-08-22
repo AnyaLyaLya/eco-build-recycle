@@ -11,7 +11,6 @@ export const accordionData = [
       'Excavation of foundation elements',
       'High-rise buildings and commercial buildings',
     ],
-    imageUrl: '/rubbish.png'
   },
   {
     title: 'Removal of construction waste',
@@ -25,7 +24,6 @@ export const accordionData = [
       'Excavation of foundation elements',
       'High-rise buildings and commercial buildings',
     ],
-    imageUrl: '/rubbish.png'
   },
   {
     title: 'dismantling of reinforced concrete structures',
@@ -39,6 +37,5 @@ export const accordionData = [
       'Excavation of foundation elements',
       'High-rise buildings and commercial buildings',
     ],
-    imageUrl: '/rubbish.png'
   },
 ];
