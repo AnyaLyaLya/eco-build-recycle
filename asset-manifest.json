@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/eco-build-recycle/static/css/main.e8de15c3.css",
-    "main.js": "/eco-build-recycle/static/js/main.d5413d83.js",
+    "main.css": "/eco-build-recycle/static/css/main.6a41dad9.css",
+    "main.js": "/eco-build-recycle/static/js/main.a14e596a.js",
     "static/media/bunner.jpeg": "/eco-build-recycle/static/media/bunner.b1a50791f6b92c058c0e.jpeg",
     "static/media/earth.png": "/eco-build-recycle/static/media/earth.fe12f128db378c7fa9db.png",
     "static/media/rubbish.png": "/eco-build-recycle/static/media/rubbish.74348fd715586b9a093d.png",
     "index.html": "/eco-build-recycle/index.html",
-    "main.e8de15c3.css.map": "/eco-build-recycle/static/css/main.e8de15c3.css.map",
-    "main.d5413d83.js.map": "/eco-build-recycle/static/js/main.d5413d83.js.map"
+    "main.6a41dad9.css.map": "/eco-build-recycle/static/css/main.6a41dad9.css.map",
+    "main.a14e596a.js.map": "/eco-build-recycle/static/js/main.a14e596a.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8de15c3.css",
-    "static/js/main.d5413d83.js"
+    "static/css/main.6a41dad9.css",
+    "static/js/main.a14e596a.js"
   ]
 }
