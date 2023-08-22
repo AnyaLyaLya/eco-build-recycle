@@ -1,0 +1,110 @@
+.contact {
+
+  &__image {
+    width: 100%;
+    padding: 20px;
+    animation: spin 8s linear infinite;
+  }
+
+  &__title {
+    text-transform: uppercase;
+
+    @include title (36px, 150%);
+
+    @include onMobile {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__content {
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    align-items: center;
+
+    @include onTabletXS {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    &--field {
+      position: relative;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    padding: 15px;
+    margin-bottom: 32px;
+    width: 100%;
+    color: $brown;
+    border-radius: 5px;
+    border: 1px solid $brown;
+    transition: all 0.5s ease-in-out;
+
+    @include text(14px, normal);
+
+    &:hover {
+      border-color: $accent;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $accent;
+    }
+
+    &::placeholder {
+      color: $brown;
+      opacity: 0.8;
+
+      @include text(14px, normal);
+    }
+  }
+
+  &__textarea {
+    margin-bottom: 40px;
+    padding: 15px 15px 55px;
+  }
+
+  &__button {
+    padding: 15px 50px;
+    border-radius: 5px;
+    border: 1px solid $accent; 
+    background-color: $white;
+
+    transition: all 0.5s ease-in-out;
+
+    @include text(18px, normal);
+
+    &:hover {
+      color: $white;
+      background-color: $accent;
+    }
+
+    @include onLaptop {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: -20px;
+    color: red;
+    transition: all 0.3s ease;
+
+    @include text(12px, normal);
+  }
+}
+
+@keyframes spin { 
+  100% { 
+    -webkit-transform: rotate(360deg); 
+    transform:rotate(360deg); 
+  } 
+}

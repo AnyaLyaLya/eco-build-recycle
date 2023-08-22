@@ -1,0 +1,161 @@
+.bunner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 176px;
+  padding: 100px 0 120px;
+  
+  &__title {
+    margin-top: 42px;
+    text-transform: uppercase;
+    color: $brown;
+    @include title (46px, 120%);
+
+    &--accent {
+      display: inline;
+      color: $accent;
+    }
+
+    @include onLaptop {
+      font-size: 40px;
+      margin-top: 32px;
+    }
+
+    @include onTablet {
+      font-size: 36px;
+      margin-top: 20px;
+    }
+
+    @include onMobile {
+      font-size: 32px;
+      margin-top: 18px;
+    }
+  }
+
+  &__text {
+    margin-top: 46px;
+
+    @include text (20px, 150%);
+
+    @include onLaptop {
+      font-size: 18px;
+      margin-top: 36px;
+    }
+
+    @include onTablet {
+      font-size: 16px;
+      margin-top: 24px;
+    }
+
+    @include onMobile {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+      transform: scale(105%);
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+    top: -60%;
+    left: -25%;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $accent;
+
+    @include text (18px, normal);
+
+    @include onLaptop {
+      top: -50%;
+      left: -35%;
+      font-size: 16px;
+    }
+
+    @include onTablet {
+      top: -45%;
+      left: -60%;
+      font-size: 14px;
+    }
+
+    @include onTabletXS {
+      top: -125%;
+      left: 10%;
+      justify-content: flex-end;
+    }
+
+    &--svg {
+      box-sizing: content-box;
+      border: 20px solid $white;
+      border-radius: 50%;
+
+      transition: all 0.5s ease-in-out;
+
+      & path,
+      & circle {
+        transition: all 0.5s ease-in-out;
+      }
+
+      &:hover {
+        transform: rotateZ(0.125turn);
+
+        & path {
+          stroke: $accent;
+        }
+
+        & circle {
+          fill: $white; 
+        }
+      }
+
+      @include onTablet {
+        width: 65px;
+        height: 65px;
+        border-width: 12px;
+      }
+    }
+  }
+
+  &__image-block {
+    position: relative;
+    top: 0;
+  }
+
+  &__recycle {
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      transform: rotate(1turn) scale(1.5);
+    }
+  }
+
+  @include onLaptop {
+    gap: 60px;
+  }
+
+  @include onTablet {
+    padding: 80px 0 66px;
+  }
+
+  @include onTabletXS {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  @include onMobile {
+    padding: 50px 0 32px;
+  }
+}

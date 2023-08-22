@@ -1,0 +1,106 @@
+.achievement {
+  padding: 84px 0 116px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+    list-style: none;
+
+    @include onTablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 80px;
+    }
+
+    @include onTabletXS {
+
+    }
+
+    @include onMobile {
+      gap: 60px;
+    }
+  }
+
+  &__item {
+    padding-right: 48px;
+    border-right: 1px solid #B0B0B0;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:nth-of-type(even) {
+      @include onTablet {
+        border-right: none;
+      }
+
+      @include onTabletXS {
+        padding-right: 0;
+      }
+    }
+
+    &--title {
+      color: $brown;
+      transition: color 0.5s ease-in-out;
+
+      @include title(96px, 150%);
+
+      &:hover {
+        color: $accent;
+      }
+
+      @include onLaptop {
+        font-size: 80px;
+      }
+
+      @include onTablet {
+        font-size: 64px;
+      }
+
+      @include onTabletXS {
+        font-size: 48px;
+      }
+
+      @include onMobile {
+        font-size: 48px;
+      }
+    }
+
+    &--text {
+      @include title(20px, 150%);
+
+      @include onLaptop {
+        font-size: 18px;
+      }
+
+      @include onTablet {
+        font-size: 16px;
+      }
+
+      @include onMobile {
+        font-size: 14px;
+      }
+    }
+
+    @include onTablet {
+      padding-right: 130px;
+    }
+
+    @include onTabletXS {
+      padding-right: 24px;
+      border-right: none;
+    }
+
+    @include onMobile {
+      padding-right: 0;
+    }
+  }
+
+  @include onTablet {
+    padding: 125px 0 90px;
+  }
+
+  @include onMobile {
+    padding: 32px 0 58px;
+  }
+}

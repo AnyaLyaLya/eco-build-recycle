@@ -1,0 +1,12 @@
+.footer {
+  background-color: $brown;
+
+  &__title {
+    text-transform: uppercase;
+    color: $white;
+    margin-bottom: 86px;
+
+    @include title (36px, 150%);
+  }
+}
+

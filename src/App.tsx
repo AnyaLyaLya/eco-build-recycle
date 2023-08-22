@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.scss';
+import { Header } from './components/Header';
+import { Bunner } from './components/Bunner';
+import { Achievement } from './components/Achievement';
+import { Footer } from './components/Footer';
+import { Slider } from './components/Slider';
+import { ContactUs } from './components/ContactUs';
+import { Response } from './types/Response';
+import { Modal } from './components/Modal';
 
 function App() {
+  const [response, setResponse] = useState<Response | null>(null);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {response && <Modal response={response} setResponse={setResponse} />}
+      <div className="App">
+        <Header />
+
+        <Bunner />
+
+        <Achievement />
+
+        <Slider />
+
+        <ContactUs onSubmit={setResponse} />
+      </div>
+      
+      <Footer />
+    </>
   );
 }
 

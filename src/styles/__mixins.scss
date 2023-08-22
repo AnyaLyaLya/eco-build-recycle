@@ -1,0 +1,35 @@
+@mixin onLaptop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onTabletXS {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin onMobile {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin text ($font-size, $line-height) {
+  font-family: 'Inter', sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin title ($font-size, $line-height) {
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+}

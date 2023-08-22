@@ -1,0 +1,17 @@
+@import './styles/_mixins';
+
+.App {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px 20px 0;
+
+  @include onTablet {
+    max-width: 768px;
+    padding: 50px 40px 0;
+  }
+
+  @include onMobile {
+    max-width: 375px;
+    padding: 30px 20px 0;
+  }
+}

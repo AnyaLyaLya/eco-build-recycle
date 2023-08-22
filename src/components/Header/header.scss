@@ -1,0 +1,107 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    &--svg {
+      width: 200px; 
+
+      @include onTablet {
+        width: 170px;
+      }
+
+      @include onMobile {
+        width: 150px;
+      }
+    }
+      
+    & path {
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover path{
+      fill: $accent;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 40px;
+
+    &--link {
+      padding: 10px;
+
+      text-transform: capitalize;
+      text-decoration: none;
+      color: black;
+      transition: all 0.5s ease-in-out;
+      border: 1px solid transparent;
+      border-radius: 5px;
+
+      @include text (18px, normal);
+
+      &:hover {
+        border-color: $accent;
+      }
+
+      @include onLaptop {
+        font-size: 14px;
+      }
+    }
+
+    @include onLaptop {
+      gap: 20px;
+    }
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__button {
+    padding: 15px 50px;
+    border-radius: 5px;
+    border: 1px solid $accent; 
+    background-color: $white;
+    text-decoration: none;
+    color: $black;
+
+    transition: all 0.5s ease-in-out;
+
+    @include text(18px, normal);
+
+    &:hover {
+      color: $white;
+      background-color: $accent;
+    }
+
+    @include onLaptop {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__menu-button {
+    display: none;
+
+    @include onTablet {
+      display: block;
+
+      border: none; 
+      background-color: $white;
+    }
+
+    &--svg {
+      width: 30px;
+
+      @include onMobile {
+        width: 22px;
+      }
+    }
+  }
+}
